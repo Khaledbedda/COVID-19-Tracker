@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1122</width>
+    <height>903</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QWebEngineView" name="webEngineView">
+      <property name="url">
+       <url>
+        <string>about:blank</string>
+       </url>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1122</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuData">
+    <property name="title">
+     <string>Tracker</string>
+    </property>
+    <widget class="QMenu" name="mapGraph">
+     <property name="title">
+      <string>Map Graph</string>
+     </property>
+     <addaction name="mapgraphbycases"/>
+     <addaction name="mapgraphbydeaths"/>
+    </widget>
+    <widget class="QMenu" name="sortedChart">
+     <property name="title">
+      <string>Sorted Chart</string>
+     </property>
+     <addaction name="chartbycases"/>
+     <addaction name="chartbydeaths"/>
+    </widget>
+    <addaction name="mapGraph"/>
+    <addaction name="sortedChart"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="exportFigureSelection"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuData"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExport_Data_2">
+   <property name="text">
+    <string>Export Data</string>
+   </property>
+  </action>
+  <action name="actionBubble_Graph_Deaths_vs_Recovered">
+   <property name="text">
+    <string>Bubble Graph: Deaths vs Recovered</string>
+   </property>
+  </action>
+  <action name="actionMap_Graph">
+   <property name="text">
+    <string>Map Graph</string>
+   </property>
+  </action>
+  <action name="actionSorted_Chart">
+   <property name="text">
+    <string>Sorted Chart</string>
+   </property>
+  </action>
+  <action name="chartbycases">
+   <property name="text">
+    <string>Sorted Chart By Cases</string>
+   </property>
+  </action>
+  <action name="chartbydeaths">
+   <property name="text">
+    <string>Sorted Chart By Deaths</string>
+   </property>
+  </action>
+  <action name="mapgraphbycases">
+   <property name="text">
+    <string>Map Graph By Cases</string>
+   </property>
+  </action>
+  <action name="mapgraphbydeaths">
+   <property name="text">
+    <string>Map Graph By Deaths</string>
+   </property>
+  </action>
+  <action name="exportFigureSelection">
+   <property name="text">
+    <string>Export Figure</string>
+   </property>
+  </action>
+  <action name="sortedChartByBoth">
+   <property name="text">
+    <string>Sorted Chart By Both</string>
+   </property>
+  </action>
+  <action name="bubbleGraphDaily">
+   <property name="text">
+    <string>Daily Recoveries vs Deaths</string>
+   </property>
+  </action>
+  <action name="bubbleGraphCumulative">
+   <property name="text">
+    <string>Cumulative Recoveries vs Deaths</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
